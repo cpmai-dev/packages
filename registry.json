@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "updated": "2026-01-31T00:00:00Z",
+    "packages": [
+        {
+            "name": "@official/code-review",
+            "author": "cpm-ai",
+            "description": "Comprehensive code review with security analysis",
+            "type": "skill",
+            "version": "1.0.0",
+            "downloads": 0,
+            "path": "packages/official/code-review"
+        }
+    ]
+}
