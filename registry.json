@@ -10,6 +10,246 @@
       "version": "1.0.0",
       "downloads": 0,
       "path": "packages/skills/official--security-review"
+    },
+    {
+      "name": "@affaan-m/backend-patterns",
+      "author": "affaan-m",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--backend-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/clickhouse-io",
+      "author": "affaan-m",
+      "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--clickhouse-io",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/coding-standards",
+      "author": "affaan-m",
+      "description": "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--coding-standards",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/continuous-learning",
+      "author": "affaan-m",
+      "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--continuous-learning",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/continuous-learning-v2",
+      "author": "affaan-m",
+      "description": "Advanced instinct-based learning system that turns Claude Code sessions into reusable knowledge through atomic behaviors with confidence scoring.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--continuous-learning-v2",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/eval-harness",
+      "author": "affaan-m",
+      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--eval-harness",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/frontend-patterns",
+      "author": "affaan-m",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--frontend-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/golang-patterns",
+      "author": "affaan-m",
+      "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--golang-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/golang-testing",
+      "author": "affaan-m",
+      "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--golang-testing",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/iterative-retrieval",
+      "author": "affaan-m",
+      "description": "Systematic approach for multi-agent workflows where subagents progressively refine their context needs through iterative search and evaluation.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--iterative-retrieval",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/java-coding-standards",
+      "author": "affaan-m",
+      "description": "Java coding standards for Spring Boot services - naming, immutability, Optional usage, streams, exceptions, generics, and project layout.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--java-coding-standards",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/jpa-patterns",
+      "author": "affaan-m",
+      "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--jpa-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/postgres-patterns",
+      "author": "affaan-m",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--postgres-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/project-guidelines-example",
+      "author": "affaan-m",
+      "description": "Example template for project-specific skills containing architecture overview, file structure, code patterns, and testing requirements.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--project-guidelines-example",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/security-review",
+      "author": "affaan-m",
+      "description": "Security best practices and vulnerability detection for web applications including authentication, input validation, and OWASP Top 10.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--security-review",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/springboot-patterns",
+      "author": "affaan-m",
+      "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--springboot-patterns",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/springboot-security",
+      "author": "affaan-m",
+      "description": "Spring Boot security patterns for authentication, authorization, input validation, and operational security best practices.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--springboot-security",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/springboot-tdd",
+      "author": "affaan-m",
+      "description": "Spring Boot TDD workflow with JUnit 5, MockMvc, Testcontainers, and JaCoCo for 80%+ code coverage.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--springboot-tdd",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/springboot-verification",
+      "author": "affaan-m",
+      "description": "Verification loop for Spring Boot projects - build, static analysis, tests with coverage, security scans, and diff review.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--springboot-verification",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/strategic-compact",
+      "author": "affaan-m",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--strategic-compact",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/tdd-workflow",
+      "author": "affaan-m",
+      "description": "Test-driven development workflow enforcing tests-first methodology with 80%+ coverage including unit, integration, and E2E tests.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--tdd-workflow",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/verification-loop",
+      "author": "affaan-m",
+      "description": "Comprehensive verification system for code quality gates including build, type check, lint, tests, and security scans.",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/affaan-m--verification-loop",
+      "source": "https://github.com/affaan-m/everything-claude-code"
+    },
+    {
+      "name": "@affaan-m/claude-rules",
+      "author": "affaan-m",
+      "description": "Comprehensive Claude Code rules covering agents, coding style, git workflow, hooks, patterns, performance, security, and testing.",
+      "type": "rules",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/rules/affaan-m--claude-rules",
+      "source": "https://github.com/affaan-m/everything-claude-code",
+      "files": [
+        "agents.md",
+        "coding-style.md",
+        "git-workflow.md",
+        "hooks.md",
+        "patterns.md",
+        "performance.md",
+        "security.md",
+        "testing.md"
+      ]
     }
   ]
 }
