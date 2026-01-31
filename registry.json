@@ -4,99 +4,171 @@
   "packages": [
     {
       "name": "@cpm/security-review",
-      "path": "skills/cpm/security-review"
+      "path": "skills/cpm/security-review",
+      "version": "1.0.0",
+      "description": "Security-focused code review skill",
+      "author": "cpm"
     },
     {
       "name": "@affaan-m/backend-patterns",
-      "path": "skills/affaan-m/backend-patterns"
+      "path": "skills/affaan-m/backend-patterns",
+      "version": "1.0.0",
+      "description": "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/clickhouse-io",
-      "path": "skills/affaan-m/clickhouse-io"
+      "path": "skills/affaan-m/clickhouse-io",
+      "version": "1.0.0",
+      "description": "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/coding-standards",
-      "path": "skills/affaan-m/coding-standards"
+      "path": "skills/affaan-m/coding-standards",
+      "version": "1.0.0",
+      "description": "Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/continuous-learning",
-      "path": "skills/affaan-m/continuous-learning"
+      "path": "skills/affaan-m/continuous-learning",
+      "version": "1.0.0",
+      "description": "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/continuous-learning-v2",
-      "path": "skills/affaan-m/continuous-learning-v2"
+      "path": "skills/affaan-m/continuous-learning-v2",
+      "version": "1.0.0",
+      "description": "Advanced instinct-based learning system that turns Claude Code sessions into reusable knowledge through atomic behaviors with confidence scoring",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/eval-harness",
-      "path": "skills/affaan-m/eval-harness"
+      "path": "skills/affaan-m/eval-harness",
+      "version": "1.0.0",
+      "description": "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/frontend-patterns",
-      "path": "skills/affaan-m/frontend-patterns"
+      "path": "skills/affaan-m/frontend-patterns",
+      "version": "1.0.0",
+      "description": "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/golang-patterns",
-      "path": "skills/affaan-m/golang-patterns"
+      "path": "skills/affaan-m/golang-patterns",
+      "version": "1.0.0",
+      "description": "Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/golang-testing",
-      "path": "skills/affaan-m/golang-testing"
+      "path": "skills/affaan-m/golang-testing",
+      "version": "1.0.0",
+      "description": "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage with TDD methodology",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/iterative-retrieval",
-      "path": "skills/affaan-m/iterative-retrieval"
+      "path": "skills/affaan-m/iterative-retrieval",
+      "version": "1.0.0",
+      "description": "Systematic approach for multi-agent workflows where subagents progressively refine their context needs through iterative search and evaluation",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/java-coding-standards",
-      "path": "skills/affaan-m/java-coding-standards"
+      "path": "skills/affaan-m/java-coding-standards",
+      "version": "1.0.0",
+      "description": "Java coding standards for Spring Boot services - naming, immutability, Optional usage, streams, exceptions, generics, and project layout",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/jpa-patterns",
-      "path": "skills/affaan-m/jpa-patterns"
+      "path": "skills/affaan-m/jpa-patterns",
+      "version": "1.0.0",
+      "description": "JPA/Hibernate patterns for entity design, relationships, query optimization, transactions, auditing, indexing, pagination, and pooling in Spring Boot",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/postgres-patterns",
-      "path": "skills/affaan-m/postgres-patterns"
+      "path": "skills/affaan-m/postgres-patterns",
+      "version": "1.0.0",
+      "description": "PostgreSQL database patterns for query optimization, schema design, indexing, and security based on Supabase best practices",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/project-guidelines-example",
-      "path": "skills/affaan-m/project-guidelines-example"
+      "path": "skills/affaan-m/project-guidelines-example",
+      "version": "1.0.0",
+      "description": "Example template for project-specific skills containing architecture overview, file structure, code patterns, and testing requirements",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/security-review",
-      "path": "skills/affaan-m/security-review"
+      "path": "skills/affaan-m/security-review",
+      "version": "1.0.0",
+      "description": "Security best practices and vulnerability detection for web applications including authentication, input validation, and OWASP Top 10",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/springboot-patterns",
-      "path": "skills/affaan-m/springboot-patterns"
+      "path": "skills/affaan-m/springboot-patterns",
+      "version": "1.0.0",
+      "description": "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/springboot-security",
-      "path": "skills/affaan-m/springboot-security"
+      "path": "skills/affaan-m/springboot-security",
+      "version": "1.0.0",
+      "description": "Spring Boot security patterns for authentication, authorization, input validation, and operational security best practices",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/springboot-tdd",
-      "path": "skills/affaan-m/springboot-tdd"
+      "path": "skills/affaan-m/springboot-tdd",
+      "version": "1.0.0",
+      "description": "Spring Boot TDD workflow with JUnit 5, MockMvc, Testcontainers, and JaCoCo for 80%+ code coverage",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/springboot-verification",
-      "path": "skills/affaan-m/springboot-verification"
+      "path": "skills/affaan-m/springboot-verification",
+      "version": "1.0.0",
+      "description": "Verification loop for Spring Boot projects - build, static analysis, tests with coverage, security scans, and diff review",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/strategic-compact",
-      "path": "skills/affaan-m/strategic-compact"
+      "path": "skills/affaan-m/strategic-compact",
+      "version": "1.0.0",
+      "description": "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/tdd-workflow",
-      "path": "skills/affaan-m/tdd-workflow"
+      "path": "skills/affaan-m/tdd-workflow",
+      "version": "1.0.0",
+      "description": "Test-driven development workflow enforcing tests-first methodology with 80%+ coverage including unit, integration, and E2E tests",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/verification-loop",
-      "path": "skills/affaan-m/verification-loop"
+      "path": "skills/affaan-m/verification-loop",
+      "version": "1.0.0",
+      "description": "Comprehensive verification system for code quality gates including build, type check, lint, tests, and security scans",
+      "author": "affaan-m"
     },
     {
       "name": "@affaan-m/claude-rules",
-      "path": "rules/affaan-m/claude-rules"
+      "path": "rules/affaan-m/claude-rules",
+      "version": "1.0.0",
+      "description": "Comprehensive Claude Code rules covering agents, coding style, git workflow, hooks, patterns, performance, security, and testing",
+      "author": "affaan-m"
     }
   ]
 }
