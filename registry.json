@@ -1,33 +1,42 @@
 {
-    "version": 1,
-    "updated": "2026-01-31T00:00:00Z",
-    "packages": [
-      {
-        "name": "@official/code-review",
-        "author": "official",
-        "description": "Comprehensive code review with security analysis",
-        "type": "skill",
-        "version": "1.0.0",
-        "downloads": 0,
-        "path": "packages/skills/official--code-review"
-      },
-      {
-        "name": "@joe/backend-patterns",
-        "author": "joe",
-        "description": "Backend architecture patterns",
-        "type": "skill", 
-        "version": "1.0.0",
-        "downloads": 0,
-        "path": "packages/skills/joe--backend-patterns"
-      },
-      {
-        "name": "@jane/react-rules",
-        "author": "jane",
-        "description": "React best practices and conventions",
-        "type": "rules",
-        "version": "1.0.0",
-        "downloads": 0,
-        "path": "packages/rules/jane--react-rules"
-      }
-    ]
-  }
+  "version": 1,
+  "updated": "2026-01-31T00:00:00Z",
+  "packages": [
+    {
+      "name": "@official/code-review",
+      "author": "official",
+      "description": "Comprehensive code review with security analysis",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/official--code-review",
+      "keywords": ["code-review", "security", "best-practices", "quality"],
+      "verified": true,
+      "official": true
+    },
+    {
+      "name": "@joe/backend-patterns",
+      "author": "joe",
+      "description": "Backend architecture patterns",
+      "type": "skill",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/skills/joe--backend-patterns",
+      "keywords": ["backend", "architecture", "patterns", "api"],
+      "verified": false,
+      "official": false
+    },
+    {
+      "name": "@jane/react-rules",
+      "author": "jane",
+      "description": "React best practices and conventions",
+      "type": "rules",
+      "version": "1.0.0",
+      "downloads": 0,
+      "path": "packages/rules/jane--react-rules",
+      "keywords": ["react", "frontend", "conventions", "best-practices"],
+      "verified": false,
+      "official": false
+    }
+  ]
+}
