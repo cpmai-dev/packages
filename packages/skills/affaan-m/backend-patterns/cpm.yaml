@@ -1,0 +1,9 @@
+name: "@affaan-m/backend-patterns"
+version: "1.0.0"
+description: "Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /backend-patterns
+  description: "Apply backend development patterns and best practices"

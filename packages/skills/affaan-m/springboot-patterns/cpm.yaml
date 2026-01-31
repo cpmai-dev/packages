@@ -1,0 +1,9 @@
+name: "@affaan-m/springboot-patterns"
+version: "1.0.0"
+description: "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /springboot-patterns
+  description: "Apply Spring Boot architecture patterns"

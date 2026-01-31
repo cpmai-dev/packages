@@ -1,0 +1,9 @@
+name: "@affaan-m/frontend-patterns"
+version: "1.0.0"
+description: "Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /frontend-patterns
+  description: "Apply frontend development patterns and best practices"

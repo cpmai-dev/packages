@@ -1,0 +1,9 @@
+name: "@affaan-m/verification-loop"
+version: "1.0.0"
+description: "Comprehensive verification system for code quality gates including build, type check, lint, tests, and security scans."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /verification-loop
+  description: "Run comprehensive code quality verification"

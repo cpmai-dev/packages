@@ -1,0 +1,17 @@
+name: "@affaan-m/claude-rules"
+version: "1.0.0"
+description: "Comprehensive Claude Code rules covering agents, coding style, git workflow, hooks, patterns, performance, security, and testing."
+author: "affaan-m"
+type: rules
+source: "https://github.com/affaan-m/everything-claude-code"
+rules:
+  glob: "*.md"
+  files:
+    - agents.md
+    - coding-style.md
+    - git-workflow.md
+    - hooks.md
+    - patterns.md
+    - performance.md
+    - security.md
+    - testing.md

@@ -1,0 +1,9 @@
+name: "@affaan-m/java-coding-standards"
+version: "1.0.0"
+description: "Java coding standards for Spring Boot services - naming, immutability, Optional usage, streams, exceptions, generics, and project layout."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /java-coding-standards
+  description: "Apply Java coding standards for Spring Boot"

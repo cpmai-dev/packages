@@ -1,0 +1,9 @@
+name: "@affaan-m/postgres-patterns"
+version: "1.0.0"
+description: "PostgreSQL database patterns for query optimization, schema design, indexing, and security. Based on Supabase best practices."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /postgres-patterns
+  description: "Apply PostgreSQL patterns and Supabase best practices"

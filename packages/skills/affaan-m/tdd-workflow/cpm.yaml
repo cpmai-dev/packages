@@ -1,0 +1,9 @@
+name: "@affaan-m/tdd-workflow"
+version: "1.0.0"
+description: "Test-driven development workflow enforcing tests-first methodology with 80%+ coverage including unit, integration, and E2E tests."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /tdd-workflow
+  description: "Apply TDD workflow with 80%+ coverage"

@@ -1,0 +1,9 @@
+name: "@affaan-m/springboot-verification"
+version: "1.0.0"
+description: "Verification loop for Spring Boot projects - build, static analysis, tests with coverage, security scans, and diff review."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /springboot-verification
+  description: "Run Spring Boot verification loop"

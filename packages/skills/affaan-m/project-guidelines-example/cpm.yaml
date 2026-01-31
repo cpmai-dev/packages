@@ -1,0 +1,9 @@
+name: "@affaan-m/project-guidelines-example"
+version: "1.0.0"
+description: "Example template for project-specific skills containing architecture overview, file structure, code patterns, and testing requirements."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /project-guidelines-example
+  description: "Example project-specific skill template"

@@ -1,0 +1,9 @@
+name: "@affaan-m/clickhouse-io"
+version: "1.0.0"
+description: "ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /clickhouse-io
+  description: "Apply ClickHouse patterns for analytics workloads"

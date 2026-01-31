@@ -1,0 +1,9 @@
+name: "@affaan-m/golang-testing"
+version: "1.0.0"
+description: "Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /golang-testing
+  description: "Apply Go testing patterns with TDD methodology"

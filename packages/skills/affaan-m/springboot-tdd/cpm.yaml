@@ -1,0 +1,9 @@
+name: "@affaan-m/springboot-tdd"
+version: "1.0.0"
+description: "Spring Boot TDD workflow with JUnit 5, MockMvc, Testcontainers, and JaCoCo for 80%+ code coverage."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /springboot-tdd
+  description: "Apply Spring Boot TDD workflow"

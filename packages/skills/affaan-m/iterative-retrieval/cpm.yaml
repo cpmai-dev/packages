@@ -1,0 +1,9 @@
+name: "@affaan-m/iterative-retrieval"
+version: "1.0.0"
+description: "Systematic approach for multi-agent workflows where subagents progressively refine their context needs through iterative search and evaluation."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /iterative-retrieval
+  description: "Progressive context retrieval for multi-agent workflows"

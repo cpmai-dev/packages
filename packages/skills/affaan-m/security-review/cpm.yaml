@@ -1,0 +1,9 @@
+name: "@affaan-m/security-review"
+version: "1.0.0"
+description: "Security best practices and vulnerability detection for web applications including authentication, input validation, and OWASP Top 10."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /security-review-community
+  description: "Apply security best practices and OWASP Top 10"

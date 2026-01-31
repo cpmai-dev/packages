@@ -1,0 +1,8 @@
+name: "@cpm/security-review"
+version: "1.0.0"
+description: "Security-focused code review"
+author: "cpm"
+type: skill
+skill:
+  command: /security-review
+  description: "Perform comprehensive security review of code changes"

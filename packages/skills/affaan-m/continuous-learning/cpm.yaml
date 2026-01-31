@@ -1,0 +1,9 @@
+name: "@affaan-m/continuous-learning"
+version: "1.0.0"
+description: "Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use."
+author: "affaan-m"
+type: skill
+source: "https://github.com/affaan-m/everything-claude-code"
+skill:
+  command: /continuous-learning
+  description: "Extract and save patterns from sessions as skills"
