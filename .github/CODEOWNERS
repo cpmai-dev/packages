@@ -2,7 +2,7 @@
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default: All changes require review from owner
-* @elshanakberov
+@elshanakberov
 
 # Registry file changes require owner review
 /registry.json @elshanakberov
