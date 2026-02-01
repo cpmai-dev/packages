@@ -1,20 +1,19 @@
 # CODEOWNERS for CPM Package Registry
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-# Default: All changes require review from maintainers
-* @cpmai/maintainers
+# Default: All changes require review from owner
+* @elshanakberov
 
-# Registry file changes require core maintainer review
-# This prevents unauthorized additions to the package index
-/registry.json @cpmai/core-maintainers
+# Registry file changes require owner review
+/registry.json @elshanakberov
 
-# MCP packages require security team review due to command execution
-/packages/mcp/ @cpmai/security-team
+# MCP packages require owner review due to command execution
+/packages/mcp/ @elshanakberov
 
-# Official namespaces require core maintainer approval
-/packages/*/cpm/ @cpmai/core-maintainers
-/packages/*/cpmai/ @cpmai/core-maintainers
-/packages/*/official/ @cpmai/core-maintainers
+# Official namespaces require owner approval
+/packages/*/cpm/ @elshanakberov
+/packages/*/cpmai/ @elshanakberov
+/packages/*/official/ @elshanakberov
 
-# CI/CD and validation changes require core maintainer review
-/.github/ @cpmai/core-maintainers
+# CI/CD and validation changes require owner review
+/.github/ @elshanakberov

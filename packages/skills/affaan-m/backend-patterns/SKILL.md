@@ -300,3 +300,4 @@ class RateLimiter {
 ```
 
 **Remember**: Backend patterns enable scalable, maintainable server-side applications. Choose patterns that fit your complexity level.
+
