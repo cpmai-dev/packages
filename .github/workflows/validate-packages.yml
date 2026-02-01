@@ -1,0 +1,69 @@
+name: Validate Packages
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'packages/**'
+      - 'registry.json'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Package Submissions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq \
+            https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+
+      - name: Get changed packages
+        id: changes
+        run: |
+          # Get list of changed files between base and head
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }})
+
+          # Extract unique package paths (type/author/package)
+          CHANGED_PACKAGES=$(echo "$CHANGED_FILES" \
+            | grep "^packages/" \
+            | sed 's|packages/\([^/]*/[^/]*/[^/]*\)/.*|\1|' \
+            | sort -u \
+            | tr '\n' ' ')
+
+          echo "Changed packages: $CHANGED_PACKAGES"
+          echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+
+          # Check if registry was modified
+          if echo "$CHANGED_FILES" | grep -q "^registry.json$"; then
+            echo "registry_changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "registry_changed=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate packages
+        if: steps.changes.outputs.packages != ''
+        run: |
+          chmod +x .github/scripts/validate.sh
+          .github/scripts/validate.sh "${{ steps.changes.outputs.packages }}"
+
+      - name: Validate registry consistency
+        if: steps.changes.outputs.registry_changed == 'true'
+        run: |
+          echo "Registry was modified. Running full validation..."
+          chmod +x .github/scripts/validate.sh
+          .github/scripts/validate.sh
+
+      - name: No changes to validate
+        if: steps.changes.outputs.packages == '' && steps.changes.outputs.registry_changed == 'false'
+        run: |
+          echo "No package changes detected. Skipping validation."
