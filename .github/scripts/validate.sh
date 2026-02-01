@@ -418,9 +418,17 @@ main() {
 
     if [[ $# -gt 0 && -n "$1" ]]; then
         # Validate specific packages (from command line or changed files)
+        # Input can be newline-separated or space-separated
+        local input="$1"
+        # Convert spaces to newlines if input appears to be space-separated (no newlines)
+        if [[ "$input" != *$'\n'* && "$input" == *" "* ]]; then
+            input=$(echo "$input" | tr ' ' '\n')
+        fi
         while IFS= read -r pkg; do
+            # Trim whitespace
+            pkg=$(echo "$pkg" | xargs)
             [[ -n "$pkg" ]] && packages_to_validate+=("$pkg")
-        done <<< "$1"
+        done <<< "$input"
     else
         # Validate all packages
         while IFS= read -r dir; do

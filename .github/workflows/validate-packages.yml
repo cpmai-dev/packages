@@ -34,14 +34,19 @@ jobs:
           CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }})
 
           # Extract unique package paths (type/author/package)
+          # Keep as newline-separated for proper parsing
           CHANGED_PACKAGES=$(echo "$CHANGED_FILES" \
             | grep "^packages/" \
             | sed 's|packages/\([^/]*/[^/]*/[^/]*\)/.*|\1|' \
-            | sort -u \
-            | tr '\n' ' ')
+            | sort -u)
 
-          echo "Changed packages: $CHANGED_PACKAGES"
-          echo "packages=$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+          echo "Changed packages:"
+          echo "$CHANGED_PACKAGES"
+
+          # Use heredoc for multiline output
+          echo "packages<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGED_PACKAGES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
           # Check if registry was modified
           if echo "$CHANGED_FILES" | grep -q "^registry.json$"; then
