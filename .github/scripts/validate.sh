@@ -23,6 +23,7 @@ WARNINGS=0
 # Valid values
 VALID_TYPES="skill|rules|mcp"
 MCP_ALLOWED_COMMANDS="npx|node|python|uvx|docker"
+VALID_PLATFORMS="cursor|claude-code|windsurf|copilot|aider|cline|continue"
 ALLOWED_EXTENSIONS="md|yaml|yml|json|mdc"
 MAINTAINER_NAMESPACES="cpm|cpmai|official"
 
@@ -330,6 +331,25 @@ validate_mcp_security() {
     return 0
 }
 
+# Validate platforms field (optional, but values must be from allowlist)
+validate_platforms() {
+    local manifest="$1"
+    local platforms
+    platforms=$(yq eval '.platforms[]? // ""' "$manifest" 2>/dev/null)
+
+    if [[ -z "$platforms" ]]; then
+        return 0
+    fi
+
+    while IFS= read -r platform; do
+        if [[ -n "$platform" && ! "$platform" =~ ^($VALID_PLATFORMS)$ ]]; then
+            log_error "E108" "$manifest" "Invalid platform '$platform'. Allowed: cursor, claude-code, windsurf, copilot, aider, cline, continue"
+            return 1
+        fi
+    done <<< "$platforms"
+    return 0
+}
+
 # Validate namespace usage
 validate_namespace() {
     local manifest="$1"
@@ -417,6 +437,7 @@ validate_package() {
         validate_no_hidden_files "$pkg_dir" || failed=1
         validate_allowed_filetypes "$pkg_dir" || failed=1
         validate_mcp_security "$manifest" || failed=1
+        validate_platforms "$manifest" || failed=1
         validate_namespace "$manifest"
         validate_registry_entry "$manifest" || failed=1
         validate_registry_version "$manifest" || failed=1

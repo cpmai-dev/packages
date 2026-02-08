@@ -72,6 +72,10 @@ description: "Rules for consistent coding"
 author: "johndoe"
 type: rules
 source: "https://github.com/johndoe/my-rules"  # Optional
+platforms:                                       # Optional: compatible AI agents
+  - cursor
+  - claude-code
+  - windsurf
 rules:
   glob: "*.md"                                  # File pattern
   files:                                        # List all rule files

@@ -1,0 +1,12 @@
+name: "@cpm/chrome-extension"
+version: "1.0.0"
+description: "Chrome extension development rules for Manifest V3, covering architecture, security, performance, and best practices"
+author: "cpm"
+type: rules
+platforms:
+  - cursor
+  - claude-code
+rules:
+  glob: "*.md"
+  files:
+    - chrome-extension.md
