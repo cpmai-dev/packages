@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# CPM Package Validation Script
+# CPM Package Validation Script - Package Manager for AI Agents
 # Dependencies: yq (YAML parser), jq (JSON parser)
 # Exit codes: 0 = all validations pass, 1 = one or more validations fail
 

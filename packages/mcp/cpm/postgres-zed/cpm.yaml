@@ -1,0 +1,12 @@
+name: "@cpm/postgres-zed"
+version: "1.0.0"
+description: "Patched PostgreSQL MCP server by Zed Industries with SQL injection fix for secure read-only database access"
+author: "cpm"
+type: mcp
+source: "https://github.com/zed-industries/postgres-context-server"
+mcp:
+  command: npx
+  args:
+    - "-y"
+    - "@zeddotdev/postgres-context-server"
+    - "postgresql://localhost/mydb"

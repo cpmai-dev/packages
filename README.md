@@ -1,6 +1,6 @@
 # CPM Packages
 
-The official package registry for [CPM](https://cpm-ai.dev) - the package manager for Claude Code.
+The official package registry for [CPM](https://cpm-ai.dev) - the package manager for AI agents.
 
 ## Install a Package
 
@@ -15,12 +15,15 @@ Visit [cpm-ai.dev/packages](https://cpm-ai.dev/packages) to browse all available
 
 ## Publish Your Own
 
-Visit [cpm-ai.dev/publish](https://cpm-ai.dev/publish) to share your Claude Code skills with the community.
+Visit [cpm-ai.dev/publish](https://cpm-ai.dev/publish) to share your skills, rules, and MCP servers with the community.
 
 ## Structure
 
 ```
 packages/
+├── skills/             # Slash commands that extend agent capabilities
+├── rules/              # Markdown rules that guide agent behavior
+├── mcp/                # Model Context Protocol server integrations
 ├── official/           # Official CPM packages
 │   └── code-review/
 ├── username/           # Community packages
@@ -30,8 +33,8 @@ packages/
 
 Each package contains:
 
-- `meta.json` - Package metadata
-- `skill.md` / `rules.md` - Package content
+- `cpm.yaml` - Package manifest
+- `SKILL.md` / `*.md` - Package content
 
 ## License
 

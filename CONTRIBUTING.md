@@ -1,13 +1,13 @@
 # Contributing to CPM Package Registry
 
-This guide explains how to submit packages to the CPM (Claude Package Manager) registry.
+This guide explains how to submit packages to the CPM registry - the package manager for AI agents.
 
 ## Package Types
 
 | Type | Description | Directory |
 |------|-------------|-----------|
-| **skill** | Slash commands that extend Claude's capabilities | `packages/skills/` |
-| **rules** | Markdown rules that guide Claude's behavior | `packages/rules/` |
+| **skill** | Slash commands that extend agent capabilities | `packages/skills/` |
+| **rules** | Markdown rules that guide agent behavior | `packages/rules/` |
 | **mcp** | Model Context Protocol server integrations | `packages/mcp/` |
 
 ## How to Submit a Package
@@ -104,7 +104,7 @@ description: Brief description
 
 # My Skill
 
-Instructions and content for Claude to follow when this skill is invoked.
+Instructions and content for the agent to follow when this skill is invoked.
 
 ## Usage
 

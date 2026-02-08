@@ -1,0 +1,11 @@
+name: "@cpm/supabase"
+version: "1.0.0"
+description: "Supabase MCP server for managing tables, fetching config, querying data, and interacting with Supabase projects"
+author: "cpm"
+type: mcp
+source: "https://github.com/supabase-community/supabase-mcp"
+mcp:
+  command: npx
+  args:
+    - "-y"
+    - "@supabase/mcp-server-supabase@latest"

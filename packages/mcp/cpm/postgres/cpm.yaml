@@ -1,0 +1,12 @@
+name: "@cpm/postgres"
+version: "1.0.0"
+description: "PostgreSQL MCP server for read-only database access, schema inspection, and SQL queries via Model Context Protocol"
+author: "cpm"
+type: mcp
+source: "https://github.com/modelcontextprotocol/servers-archived"
+mcp:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-postgres"
+    - "postgresql://localhost/mydb"

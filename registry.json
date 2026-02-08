@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-01-31T00:00:00Z",
+  "updated": "2026-02-08T00:00:00Z",
   "packages": [
     {
       "name": "@cpm/security-review",
@@ -169,6 +169,27 @@
       "version": "1.0.0",
       "description": "Comprehensive Claude Code rules covering agents, coding style, git workflow, hooks, patterns, performance, security, and testing",
       "author": "affaan-m"
+    },
+    {
+      "name": "@cpm/postgres",
+      "path": "mcp/cpm/postgres",
+      "version": "1.0.0",
+      "description": "PostgreSQL MCP server for read-only database access, schema inspection, and SQL queries via Model Context Protocol",
+      "author": "cpm"
+    },
+    {
+      "name": "@cpm/postgres-zed",
+      "path": "mcp/cpm/postgres-zed",
+      "version": "1.0.0",
+      "description": "Patched PostgreSQL MCP server by Zed Industries with SQL injection fix for secure read-only database access",
+      "author": "cpm"
+    },
+    {
+      "name": "@cpm/supabase",
+      "path": "mcp/cpm/supabase",
+      "version": "1.0.0",
+      "description": "Supabase MCP server for managing tables, fetching config, querying data, and interacting with Supabase projects",
+      "author": "cpm"
     }
   ]
 }
