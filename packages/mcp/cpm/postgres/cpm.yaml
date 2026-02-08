@@ -10,3 +10,5 @@ mcp:
     - "-y"
     - "@modelcontextprotocol/server-postgres"
     - "postgresql://localhost/mydb"
+  env:
+    POSTGRES_CONNECTION_STRING: "postgresql://localhost/mydb"

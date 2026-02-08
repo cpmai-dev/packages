@@ -10,3 +10,5 @@ mcp:
     - "-y"
     - "@zeddotdev/postgres-context-server"
     - "postgresql://localhost/mydb"
+  env:
+    POSTGRES_CONNECTION_STRING: "postgresql://localhost/mydb"

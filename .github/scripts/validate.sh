@@ -308,6 +308,25 @@ validate_mcp_security() {
             return 1
         fi
     fi
+
+    # Check env keys for valid format and values for shell metacharacters
+    local env_keys
+    env_keys=$(yq eval '.mcp.env // {} | keys | .[]' "$manifest" 2>/dev/null)
+    if [[ -n "$env_keys" ]]; then
+        while IFS= read -r key; do
+            # Env var names must be uppercase alphanumeric with underscores
+            if [[ ! "$key" =~ ^[A-Z][A-Z0-9_]*$ ]]; then
+                log_error "E305" "$manifest" "SECURITY: Invalid env var name '$key'. Must be uppercase alphanumeric with underscores (e.g. DATABASE_URL)"
+                return 1
+            fi
+            local val
+            val=$(yq eval ".mcp.env.\"$key\" // \"\"" "$manifest" 2>/dev/null)
+            if echo "$val" | grep -qE '[;|&`$()]|&&|\|\|'; then
+                log_error "E306" "$manifest" "SECURITY: Shell metacharacters detected in env var '$key'. Characters like ; | & \` \$() && || are not allowed"
+                return 1
+            fi
+        done <<< "$env_keys"
+    fi
     return 0
 }
 

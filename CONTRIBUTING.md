@@ -91,6 +91,8 @@ mcp:
   command: npx                                  # One of: npx, node, python, uvx, docker
   args:                                         # Command arguments
     - "@johndoe/my-mcp-server"
+  env:                                          # Optional: environment variables
+    DATABASE_URL: "postgresql://localhost/mydb"
 ```
 
 ### Step 3: Add Content Files
