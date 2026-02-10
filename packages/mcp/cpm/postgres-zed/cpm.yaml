@@ -3,6 +3,9 @@ version: "1.0.0"
 description: "Patched PostgreSQL MCP server by Zed Industries with SQL injection fix for secure read-only database access"
 author: "cpm"
 type: mcp
+platforms:
+  - claude-code
+  - cursor
 source: "https://github.com/zed-industries/postgres-context-server"
 mcp:
   command: npx

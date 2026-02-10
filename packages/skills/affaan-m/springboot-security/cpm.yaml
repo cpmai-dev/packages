@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Spring Boot security patterns for authentication, authorization, input validation, and operational security best practices."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /springboot-security

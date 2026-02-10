@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Spring Boot architecture patterns, REST API design, layered services, data access, caching, async processing, and logging."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /springboot-patterns

@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /strategic-compact

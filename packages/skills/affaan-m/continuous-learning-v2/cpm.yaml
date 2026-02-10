@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Advanced instinct-based learning system that turns Claude Code sessions into reusable knowledge through atomic behaviors with confidence scoring."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /continuous-learning-v2

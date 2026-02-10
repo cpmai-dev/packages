@@ -17,6 +17,7 @@
 - [ ] `name` matches `@{username}/{package-name}` format
 - [ ] `version` is valid semver (X.Y.Z)
 - [ ] `type` is correct (skill/rules/mcp)
+- [ ] `platforms` field lists supported platforms (e.g., `[claude-code]` for skills, `[claude-code, cursor]` for rules/mcp)
 - [ ] Type-specific fields are present:
   - Skills: `skill.command` and `skill.description`
   - Rules: `rules.glob` and `rules.files`
@@ -24,6 +25,7 @@
 
 #### Registry
 - [ ] Added entry to `registry.json`
+- [ ] Registry entry includes `type` and `platforms` matching manifest
 - [ ] Version in registry matches cpm.yaml
 - [ ] Description in registry matches cpm.yaml
 

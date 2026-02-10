@@ -331,16 +331,29 @@ validate_mcp_security() {
     return 0
 }
 
-# Validate platforms field (optional, but values must be from allowlist)
+# Validate platforms field (required, values must be from allowlist)
 validate_platforms() {
     local manifest="$1"
-    local platforms
-    platforms=$(yq eval '.platforms[]? // ""' "$manifest" 2>/dev/null)
 
-    if [[ -z "$platforms" ]]; then
-        return 0
+    # Check platforms is present and is an array
+    local platforms_type
+    platforms_type=$(yq eval '.platforms | type' "$manifest" 2>/dev/null)
+    if [[ "$platforms_type" != "!!seq" ]]; then
+        log_error "E108" "$manifest" "Missing or invalid 'platforms' field. Must be a YAML array, e.g.: platforms: [claude-code, cursor]"
+        return 1
     fi
 
+    # Check platforms is non-empty
+    local platforms_length
+    platforms_length=$(yq eval '.platforms | length' "$manifest" 2>/dev/null)
+    if [[ "$platforms_length" -eq 0 ]]; then
+        log_error "E108" "$manifest" "Empty 'platforms' array. Must contain at least one platform, e.g.: platforms: [claude-code]"
+        return 1
+    fi
+
+    # Validate each platform value
+    local platforms
+    platforms=$(yq eval '.platforms[]' "$manifest" 2>/dev/null)
     while IFS= read -r platform; do
         if [[ -n "$platform" && ! "$platform" =~ ^($VALID_PLATFORMS)$ ]]; then
             log_error "E108" "$manifest" "Invalid platform '$platform'. Allowed: cursor, claude-code, windsurf, copilot, aider, cline, continue"
@@ -380,9 +393,43 @@ validate_registry_entry() {
     local entry
     entry=$(jq -e --arg name "$name" '.packages[] | select(.name == $name)' "$REGISTRY_FILE" 2>/dev/null)
     if [[ -z "$entry" ]]; then
-        log_error "E400" "$manifest" "Package '$name' not found in registry.json. Add an entry with: { \"name\": \"$name\", \"path\": \"<type>/<author>/<pkg>\", \"version\": \"X.Y.Z\", \"description\": \"...\", \"author\": \"...\" }"
+        log_error "E400" "$manifest" "Package '$name' not found in registry.json. Add an entry with: { \"name\": \"$name\", \"path\": \"...\", \"version\": \"X.Y.Z\", \"description\": \"...\", \"author\": \"...\", \"type\": \"...\", \"platforms\": [...] }"
         return 1
     fi
+
+    # Validate registry entry has type field
+    local registry_type
+    registry_type=$(echo "$entry" | jq -r '.type // ""' 2>/dev/null)
+    if [[ -z "$registry_type" || "$registry_type" == "null" ]]; then
+        log_error "E401" "$manifest" "Registry entry for '$name' missing 'type' field. Add \"type\": \"skill|rules|mcp\" to the registry entry"
+        return 1
+    fi
+
+    # Validate registry type matches manifest type
+    local manifest_type
+    manifest_type=$(yq eval '.type // ""' "$manifest" 2>/dev/null)
+    if [[ "$registry_type" != "$manifest_type" ]]; then
+        log_error "E401" "$manifest" "Type mismatch: cpm.yaml has '$manifest_type' but registry.json has '$registry_type'"
+        return 1
+    fi
+
+    # Validate registry entry has platforms field
+    local registry_platforms
+    registry_platforms=$(echo "$entry" | jq -r '.platforms // empty | length' 2>/dev/null)
+    if [[ -z "$registry_platforms" || "$registry_platforms" == "0" ]]; then
+        log_error "E403" "$manifest" "Registry entry for '$name' missing 'platforms' array. Add \"platforms\": [\"claude-code\"] (or other valid platforms)"
+        return 1
+    fi
+
+    # Validate registry platforms match manifest platforms
+    local manifest_platforms registry_platforms_sorted manifest_platforms_sorted
+    manifest_platforms_sorted=$(yq eval '.platforms[]' "$manifest" 2>/dev/null | sort | tr '\n' ',')
+    registry_platforms_sorted=$(echo "$entry" | jq -r '.platforms[]' 2>/dev/null | sort | tr '\n' ',')
+    if [[ "$manifest_platforms_sorted" != "$registry_platforms_sorted" ]]; then
+        log_error "E403" "$manifest" "Platforms mismatch: cpm.yaml has '${manifest_platforms_sorted%,}' but registry.json has '${registry_platforms_sorted%,}'"
+        return 1
+    fi
+
     return 0
 }
 

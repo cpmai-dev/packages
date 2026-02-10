@@ -21,9 +21,9 @@ Visit [cpm-ai.dev/publish](https://cpm-ai.dev/publish) to share your skills, rul
 
 ```
 packages/
-├── skills/             # Slash commands that extend agent capabilities
-├── rules/              # Markdown rules that guide agent behavior
-├── mcp/                # Model Context Protocol server integrations
+├── skills/             # Slash commands that extend agent capabilities (Claude Code)
+├── rules/              # Markdown rules that guide agent behavior (Claude Code, Cursor)
+├── mcp/                # Model Context Protocol server integrations (Claude Code, Cursor)
 ├── official/           # Official CPM packages
 │   └── code-review/
 ├── username/           # Community packages

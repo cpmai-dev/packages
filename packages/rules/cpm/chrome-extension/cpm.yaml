@@ -6,6 +6,7 @@ type: rules
 platforms:
   - cursor
   - claude-code
+  - windsurf
 rules:
   glob: "*.md"
   files:

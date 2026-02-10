@@ -3,6 +3,9 @@ version: "1.0.0"
 description: "PostgreSQL MCP server for read-only database access, schema inspection, and SQL queries via Model Context Protocol"
 author: "cpm"
 type: mcp
+platforms:
+  - claude-code
+  - cursor
 source: "https://github.com/modelcontextprotocol/servers-archived"
 mcp:
   command: npx

@@ -3,6 +3,9 @@ version: "1.0.0"
 description: "Comprehensive Claude Code rules covering agents, coding style, git workflow, hooks, patterns, performance, security, and testing."
 author: "affaan-m"
 type: rules
+platforms:
+  - claude-code
+  - cursor
 source: "https://github.com/affaan-m/everything-claude-code"
 rules:
   glob: "*.md"

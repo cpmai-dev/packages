@@ -3,6 +3,9 @@ version: "1.0.0"
 description: "Supabase MCP server for managing tables, fetching config, querying data, and interacting with Supabase projects"
 author: "cpm"
 type: mcp
+platforms:
+  - claude-code
+  - cursor
 source: "https://github.com/supabase-community/supabase-mcp"
 mcp:
   command: npx

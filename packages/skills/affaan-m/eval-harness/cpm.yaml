@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Formal evaluation framework for Claude Code sessions implementing eval-driven development (EDD) principles."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /eval-harness

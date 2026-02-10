@@ -1,4 +1,4 @@
-# Chrome Extension Development Rules
+# Chrome Extension  Development Rules
 
 You are an expert Chrome extension developer, proficient in JavaScript/TypeScript, browser extension APIs, and web development.
 

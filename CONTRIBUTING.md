@@ -4,11 +4,25 @@ This guide explains how to submit packages to the CPM registry - the package man
 
 ## Package Types
 
-| Type | Description | Directory |
-|------|-------------|-----------|
-| **skill** | Slash commands that extend agent capabilities | `packages/skills/` |
-| **rules** | Markdown rules that guide agent behavior | `packages/rules/` |
-| **mcp** | Model Context Protocol server integrations | `packages/mcp/` |
+| Type | Description | Platforms | Directory |
+|------|-------------|-----------|-----------|
+| **skill** | Slash commands that extend agent capabilities | Claude Code | `packages/skills/` |
+| **rules** | Markdown rules that guide agent behavior | Claude Code, Cursor | `packages/rules/` |
+| **mcp** | Model Context Protocol server integrations | Claude Code, Cursor | `packages/mcp/` |
+
+## Platform Compatibility
+
+Every package must declare which platforms it supports via the `platforms` field.
+
+| Type | Default platforms | Reason |
+|------|-------------------|--------|
+| **skill** | `[claude-code]` | Skills are Claude Code slash commands. No other platform supports this yet. |
+| **rules** | `[claude-code, cursor]` | CPM converts markdown to each platform's native format automatically. |
+| **mcp** | `[claude-code, cursor]` | MCP is a standard protocol supported by all compatible platforms. |
+
+Authors can narrow compatibility if needed (e.g., a rule that only makes sense on one platform).
+
+**Valid platform values:** `claude-code`, `cursor`
 
 ## How to Submit a Package
 
@@ -47,7 +61,11 @@ version: "1.0.0"                       # Semantic versioning (X.Y.Z)
 description: "Brief description"       # What your package does
 author: "your-username"                # Your username
 type: skill                            # One of: skill, rules, mcp
+platforms:                             # Required: supported platforms
+  - claude-code
 ```
+
+> **Note:** Write your content as plain Markdown. CPM automatically converts it to each platform's native format during installation. You do not need to create platform-specific file variants.
 
 #### Type-Specific Fields
 
@@ -58,6 +76,8 @@ version: "1.0.0"
 description: "A skill that does something useful"
 author: "johndoe"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/johndoe/my-skill"  # Optional: source repo
 skill:
   command: /my-skill                            # Slash command (must start with /)
@@ -71,11 +91,10 @@ version: "1.0.0"
 description: "Rules for consistent coding"
 author: "johndoe"
 type: rules
-source: "https://github.com/johndoe/my-rules"  # Optional
-platforms:                                       # Optional: compatible AI agents
-  - cursor
+platforms:
   - claude-code
-  - windsurf
+  - cursor
+source: "https://github.com/johndoe/my-rules"  # Optional
 rules:
   glob: "*.md"                                  # File pattern
   files:                                        # List all rule files
@@ -90,6 +109,9 @@ version: "1.0.0"
 description: "MCP server for database access"
 author: "johndoe"
 type: mcp
+platforms:
+  - claude-code
+  - cursor
 source: "https://github.com/johndoe/my-mcp"    # Optional
 mcp:
   command: npx                                  # One of: npx, node, python, uvx, docker
@@ -136,11 +158,13 @@ Add your package to `registry.json` in the `packages` array:
   "path": "skills/your-username/package-name",
   "version": "1.0.0",
   "description": "Same description as cpm.yaml",
-  "author": "your-username"
+  "author": "your-username",
+  "type": "skill",
+  "platforms": ["claude-code"]
 }
 ```
 
-**Important:** The `version` and `description` must match your `cpm.yaml`.
+**Important:** The `version`, `description`, `type`, and `platforms` must match your `cpm.yaml`.
 
 ### Step 5: Create a Pull Request
 
@@ -160,7 +184,7 @@ Your PR will be automatically validated. Here's what we check:
 |-------|-------------|
 | cpm.yaml exists | Every package must have a manifest |
 | Valid YAML | No syntax errors |
-| Required fields | name, version, description, author, type |
+| Required fields | name, version, description, author, type, platforms |
 | Valid semver | Version must be X.Y.Z format (e.g., 1.0.0) |
 | Valid type | Must be `skill`, `rules`, or `mcp` |
 | Type-specific fields | Skills need `skill.command`, rules need `rules.files`, etc. |
@@ -186,10 +210,17 @@ Your PR will be automatically validated. Here's what we check:
 |---------|-------------|
 | `.md`, `.yaml`, `.yml`, `.json`, `.mdc` | `.sh`, `.exe`, `.py`, `.js`, `.ts`, etc. |
 
+### Platform Compatibility
+| Check | Requirement |
+|-------|-------------|
+| platforms field | Required: array of supported platforms |
+| Valid values | `claude-code`, `cursor` (more coming soon) |
+
 ### Registry Consistency
 | Check | Requirement |
 |-------|-------------|
 | Registry entry exists | Package must be in `registry.json` |
+| Registry type & platforms | Must match cpm.yaml `type` and `platforms` |
 | Version matches | cpm.yaml and registry.json versions must match |
 
 ## Reserved Namespaces
@@ -226,6 +257,8 @@ version: "1.0.0"
 description: "Automated code review with best practices and security checks"
 author: "johndoe"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/johndoe/code-reviewer"
 skill:
   command: /code-review
@@ -261,7 +294,9 @@ When invoked, perform a comprehensive code review covering:
   "path": "skills/johndoe/code-reviewer",
   "version": "1.0.0",
   "description": "Automated code review with best practices and security checks",
-  "author": "johndoe"
+  "author": "johndoe",
+  "type": "skill",
+  "platforms": ["claude-code"]
 }
 ```
 

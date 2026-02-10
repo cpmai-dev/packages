@@ -3,6 +3,8 @@ version: "1.0.0"
 description: "Example template for project-specific skills containing architecture overview, file structure, code patterns, and testing requirements."
 author: "affaan-m"
 type: skill
+platforms:
+  - claude-code
 source: "https://github.com/affaan-m/everything-claude-code"
 skill:
   command: /project-guidelines-example
