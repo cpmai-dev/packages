@@ -1,0 +1,11 @@
+name: "@kriptoburak/xquik"
+version: "1.0.0"
+description: "Use Xquik for X data, monitoring, publishing, and automation through REST, webhooks, and MCP."
+author: "kriptoburak"
+type: skill
+platforms:
+  - claude-code
+source: "https://github.com/Xquik-dev/x-twitter-scraper"
+skill:
+  command: /xquik
+  description: "Use Xquik through REST, webhooks, and MCP"
