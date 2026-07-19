@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-02-10T00:00:00Z",
+  "updated": "2026-07-18T17:47:11Z",
   "packages": [
     {
       "name": "@cpm/security-review",
@@ -253,6 +253,15 @@
       "author": "cpm",
       "type": "rules",
       "platforms": ["claude-code", "cursor", "windsurf"]
+    },
+    {
+      "name": "@kriptoburak/xquik",
+      "path": "skills/kriptoburak/xquik",
+      "version": "1.0.0",
+      "description": "Use Xquik for X data, monitoring, publishing, and automation through REST, webhooks, and MCP.",
+      "author": "kriptoburak",
+      "type": "skill",
+      "platforms": ["claude-code"]
     }
   ]
 }

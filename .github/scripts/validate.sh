@@ -37,7 +37,7 @@ log_error() {
     if [[ -n "${GITHUB_ACTIONS:-}" ]]; then
         echo "::error file=$path::[$code] $message"
     fi
-    ((ERRORS++))
+    ((ERRORS += 1))
 }
 
 log_warning() {
@@ -48,7 +48,7 @@ log_warning() {
     if [[ -n "${GITHUB_ACTIONS:-}" ]]; then
         echo "::warning file=$path::[$code] $message"
     fi
-    ((WARNINGS++))
+    ((WARNINGS += 1))
 }
 
 log_success() {
@@ -298,7 +298,7 @@ validate_mcp_security() {
         fi
 
         # Check for suspicious flags
-        if echo "$args" | grep -qE -- '--eval|-e |--exec|^-c '; then
+        if echo "$args" | grep -qE -e '--eval|-e |--exec|^-c '; then
             log_error "E302" "$manifest" "SECURITY: Suspicious code execution flags detected in mcp.args. Flags like --eval, -e, --exec, -c allow arbitrary code execution and are not permitted"
             return 1
         fi
@@ -538,7 +538,7 @@ main() {
     local failed_packages=0
     for pkg in "${packages_to_validate[@]}"; do
         if ! validate_package "$pkg"; then
-            ((failed_packages++))
+            ((failed_packages += 1))
         fi
         echo ""
     done
